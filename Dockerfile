@@ -1,5 +1,5 @@
 # Dockerfile perl-music
-FROM acdaic4v/perl-base
+FROM acdaic4v/ubuntu-perl-base:v1
 MAINTAINER sloervi McMurphy <docker@sloervi.de>
 
 # Pakete nachinstallieren
