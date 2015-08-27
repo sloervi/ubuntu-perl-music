@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y rtmpdump ffmpeg lame libid3-tools git
 # Install get_iplayer
 RUN mkdir -p /usr/local/bin && cd /usr/local/bin && git clone git://git.infradead.org/get_iplayer.git
 
+# Get my scripts
+RUN mkdir -p /usr/local/bin/bbc && cd /usr/local/bin/bbc && git clone ...
+
 # Create User and group
 RUN groupadd -r bbc && useradd -r -g bbc bbc
 
