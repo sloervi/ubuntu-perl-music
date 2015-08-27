@@ -17,6 +17,6 @@ RUN groupadd -r bbc && useradd -r -g bbc bbc
 
 VOLUME /data
 VOLUME /config
-VOLUME /usr/local/bin/bbc
+# VOLUME /usr/local/bin/bbc
 
 ENTRYPOINT /usr/local/bin/bbc/bbc.sh
