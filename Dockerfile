@@ -8,7 +8,7 @@ LABEL Description="Create Docker Image ffor downloading BBC Radio Shows with get
 RUN apt-get update && apt-get install -y rtmpdump ffmpeg lame libid3-tools
 
 # Install get_iplayer
-cd /usr/local/bin && git clone git://git.infradead.org/get_iplayer.git
+RUN cd /usr/local/bin && git clone git://git.infradead.org/get_iplayer.git
 
 # Create User and group
 RUN groupadd -r bbc && useradd -r -g bbc bbc
