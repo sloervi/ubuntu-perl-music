@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y rtmpdump ffmpeg lame libid3-tools git
 RUN mkdir -p /usr/local/bin && cd /usr/local/bin && git clone git://git.infradead.org/get_iplayer.git
 
 # Get my scripts
-cd /usr/local/bin && git clone https://github.com/sloervi/ubuntu-perl-music.git bbc
+RUN cd /usr/local/bin && git clone https://github.com/sloervi/ubuntu-perl-music.git bbc
 
 # Create User and group
 RUN groupadd -r bbc && useradd -r -g bbc bbc
