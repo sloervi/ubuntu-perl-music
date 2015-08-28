@@ -1,5 +1,5 @@
 # Dockerfile perl-music
-FROM acdaic4v/ubuntu-perl-base:v2
+FROM acdaic4v/ubuntu-perl-base:v1
 MAINTAINER sloervi McMurphy <docker@sloervi.de>
 LABEL Description="Create Docker Image for downloading BBC Radio Shows with get_iplayer" Vendor="sloervi McMurphy" Version="1"
 
@@ -14,9 +14,13 @@ RUN cd /usr/local/bin && git clone https://github.com/sloervi/ubuntu-perl-music.
 
 # Create User and group
 RUN groupadd -r bbc && useradd -r -g bbc bbc
+RUN chown -R bbc /usr/local/bin/bbc
+RUN chmod u+x /usr/local/bin/bbc/bbc.sh
+RUN chmod u+x /usr/local/bin/bbc/bbc.pl
+RUN chown -R bbc /usr/local/bin/get_iplayer
 
 VOLUME /data
 VOLUME /config
-# VOLUME /usr/local/bin/bbc
 
 ENTRYPOINT /usr/local/bin/bbc/bbc.sh
+
