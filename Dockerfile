@@ -1,5 +1,5 @@
 # Dockerfile perl-music
-FROM acdaic4v/ubuntu-perl-base:v2
+FROM acdaic4v/ubuntu-perl-base:v20151208
 MAINTAINER sloervi McMurphy <docker@sloervi.de>
 LABEL Description="Create Docker Image for perl modules related to music" Vendor="sloervi McMurphy" Version="1"
 
